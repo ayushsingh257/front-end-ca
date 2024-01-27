@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Food Spot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <span>Food Gateway</span>
+        </div>
+        <div class="nav-links">
+            <a href="#discover-meal">Discover Your Meal</a>
+            <a href="#search">Search</a>
+        </div>
+    </nav>
+
+    <!-- Add this HTML snippet where you want the carousel -->
+    <div class="image-carousel">
+    <img src="slide1.jpg" alt="Image 1">
+    <img src="slide2.jpg" alt="Image 2">
+    <img src="slide3.jpg" alt="Image 3">
+    </div>
+
+    <div class="meal" id="discover-meal">
+        <div class="meal-header">
+            <span>Make an amazing meal for yourself</span>
+            <h1>Here is a meal recipe just for you!</h1>
+        </div>
+
+        <div class="hidden" id="loader">
+            <div id="loader-circle"></div>
+        </div>
+
+        <div class="random-meal" id="random-meal">
+            <img src="" alt="" class="random-meal-img" id="random-meal-img">
+            <div class="random-meal-label">Dish name:</div>
+            <div class="random-meal-name" id="random-meal-name"></div>
+        </div>
+
+        <a href="./#discover-meal" class="hero-btn btn-random-meal" id="get-new-meal">
+            Get yourself a new meal
+        </a>
+
+        <div class="modal-container">
+            <div class="modal-close"></div>
+            <div class="modal" id="modal">
+                <div class="modal-close-btn">Close</div>
+                <div class="modal-content">
+                    <img src="" alt="" class="modal-img" id="modal-meal-img">
+                    <div class="modal-desc">
+                        <div class="modal-label-name">Dish name:</div>
+                        <div class="modal-name" id="modal-meal-name"></div>
+                        <div class="modal-label-ingredients">Ingredients:</div>
+                        <div class="modal-ingredients" id="modal-meal-ingredients"></div>
+                        <div class="modal-label-instructions">Instructions:</div>
+                        <div class="modal-instructions" id="modal-meal-instructions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search" id="search">
+        <h1>Search for a meal</h1>
+        <form action="" class="search-form" id="search-form">
+            <input type="search" name="search" id="search-input" placeholder="Search..">
+            <input type="submit" value="Search" class="search-submit hero-btn">
+        </form>
+    </div>
+
+    <div class="search-results hidden">
+        <h2>Search result for <span class="search-query"></span></h2>
+        <div class="results" id="results">
+
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
